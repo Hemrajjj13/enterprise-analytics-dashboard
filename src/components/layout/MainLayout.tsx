@@ -1,5 +1,7 @@
 import React from "react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
+
 
 type Props = {
   children: ReactNode;
@@ -20,10 +22,10 @@ export const MainLayout = ({ children }: Props) => {
         <h2 style={{ marginBottom: "2rem" }}>Enterprise</h2>
 
         <nav style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <span>Dashboard</span>
-          <span>Analytics</span>
-          <span>Reports</span>
-          <span>Settings</span>
+          <Link to="/" style={{color: "white", textDecoration: "none"}}>Dashboard</Link>
+          <Link to="/analytics" style={{color: "white", textDecoration: "none"}}>Analytics</Link>
+          <Link to="/reports" style={{color: "white", textDecoration: "none"}}>Reports</Link>
+          <Link to="/settings" style={{color: "white", textDecoration: "none"}}>Settings</Link>
         </nav>
       </aside>
 
